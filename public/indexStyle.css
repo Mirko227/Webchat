@@ -1,0 +1,76 @@
+:root{
+    --dark-blue:#091E3D;
+    --blue:#0E5CD1;
+    --light-blue:#0E8BD1;
+    --accent:#10AD70;
+}
+
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Archivo Black', sans-serif;
+    background-image:url('./img/Minimal\ Clouds\ and\ Sky\ \(1920x1080\).jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    min-width: 250px;
+    font-size:1.2rem;
+}
+
+h1{
+    padding-block: .3em;
+    color:white;
+    text-align: center;
+    background-color: var(--blue);
+}
+
+.container{
+    background-color:  #3071d4;
+    margin: clamp(1em,5vh,3em) auto;
+    width: 90%;
+    max-width: 600px;
+}
+
+.form-container{
+    padding: 1em;
+    display: flex;
+    gap:.8em;
+    flex-direction: column;
+    padding-top:2em;
+}
+
+.username-input{
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap:.3em;
+    color:white;
+}
+
+input[name="username"]{
+    height: 3.125rem;
+    padding:.5em;
+}
+
+.submit-btn{
+    width: 100%;
+    padding: .7em;
+    font-family: 'Archivo Black', sans-serif;
+    color:rgb(106, 106, 106);
+}
+
+
+@media (max-width:576px){
+    
+    .form-container{
+
+        padding-top: 1.5em;
+    }
+ 
+ }
+ 

@@ -1,0 +1,272 @@
+/* Color 
+---------------*/
+:root{
+    --dark-blue:#091E3D;
+    --blue:#0E5CD1;
+    --light-blue:#0E8BD1;
+    --accent:#10AD70;
+}
+
+/* Typography 
+----------------*/
+body{
+    font-family: 'Archivo Black', sans-serif;
+    background-image:url('./img/Minimal\ Clouds\ and\ Sky\ \(1920x1080\).jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    min-width: 260px;
+}
+
+*
+{
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+.wrapper{
+    flex-direction: column;
+    max-width: 800px;
+    width: 90%;
+    margin: clamp(1rem,5vh,3rem) auto;
+    background-color: var(--dark-blue);
+    position: relative;
+    display: flex;
+}
+
+.chat-bg{
+    height: 70vh;
+    min-height: 300px;
+    position: relative; 
+}
+
+.msgContainer{
+    height: 90%;
+    width: 100%; 
+    overflow-y: auto;
+    padding: .5em;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.msgContainer::-webkit-scrollbar {
+    display: none;
+  }
+
+.msgDiv{
+       
+        border-radius: .2em;
+        margin: 1em;
+        display: flex;
+        min-width:90px;
+        width: fit-content;
+        padding:.5em;
+        max-width: 50%;
+        flex-direction: column;
+        gap:.4em;
+        font-size: clamp(1rem,4vw,1.125rem);
+    }   
+
+.otherMsg
+{
+    color:white;
+    background-color: var(--light-blue)
+}
+
+.messageBOT
+{
+    color:white;
+    background-color: var(--accent);
+    
+}
+
+.senderNameBOT{
+    color: #F25900;
+    font-size: .8rem;
+}
+
+.senderName{
+    font-size: .8rem;
+}
+.myMsg
+{
+    color:black;
+    background-color: white;
+    align-self: flex-end;
+}
+
+.msgDiv:last-child{
+   margin-bottom:2.5em;
+}
+
+p{
+    overflow-wrap: anywhere;
+}
+
+.timeStyle{
+    color: white;
+    font-size:.6rem;
+    align-self: flex-end;
+}
+
+.mytimeStyle{
+    color: black;
+    font-size:.6rem;
+    align-self: flex-end;
+    display:inline-block;
+}
+
+header
+{
+    background-color: var(--blue);
+    color: white;
+    padding:1em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+h1
+{
+    width: fit-content;
+}
+
+.nav-btn{
+
+    display: flex;
+    gap:.8em;
+    
+}
+.btn{
+    background-color: transparent;
+    border:none;
+    width: 60%; 
+}
+
+svg{
+    width: clamp(25px,9vw,40px);
+}
+
+.person:hover, .person:focus{
+    fill:var(--accent);
+}
+
+
+
+.bi-box-arrow-in-left:hover, .bi-box-arrow-in-left:focus{
+    fill:#F25900;
+}
+
+.userInput{
+    position: absolute;
+    bottom:0;   
+    width:100%;
+    display: flex;
+    height: 8%;
+    min-height:60px;
+    z-index: 2;
+    padding:.25em;
+}
+
+input[name="keyboard"]
+{
+width: 90%;
+font-size: 1.2rem;
+height: auto;
+padding:.75em;
+}
+
+button[name="send"]
+{
+width: 10%;
+background-color: var(--accent);
+border: 0;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100%;
+}
+
+img{
+    width: 40%;
+}
+
+*:focus {
+    outline: none;
+}
+
+
+/* styling online-card */
+
+.card{
+    position: absolute;
+    left: 50%;
+    top:0;
+    transform: translate(-50%, 0);
+    background-color: var(--dark-blue);
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.online-dot {
+    min-height:.8em;
+    min-width: .8em;
+    background-color: var(--accent);
+    border-radius: 50%;
+    display: inline-block; 
+    margin-left:.8em;
+}
+
+.users-online{
+    background-color: white;
+    padding:.5em;
+    margin-left:1em;
+    margin-bottom:1em;
+    display: flex;
+    align-items: center;
+    gap:1em;
+    max-width: 400px;
+    width: 85%;
+    height: 10vh;
+    min-height: 50px;
+    max-height: 65px;
+    border-radius: .5em;
+    order:2;
+}
+
+.online-counter{
+    margin:1em;
+    color:white;
+    order: 1;
+    font-size: 1.2rem;
+    margin-top:1.5em;
+}
+
+@media (max-width:600px){
+    
+    input[name="keyboard"]
+        {
+        width: 85%;
+        }
+    
+    button[name="send"]
+        {
+        width: 15%;
+        }
+}
+
+
+@media (max-width:320px){
+    
+   .nav-btn{
+        flex-direction: column;
+   }
+
+}
