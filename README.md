@@ -1,6 +1,6 @@
 # Webchat
 
-![webchat](https://github.com/user-attachments/assets/f4cf16fd-7aa6-4522-be2f-db8ae5cfda3c)
+![webchat](https://github.com/user-attachments/assets/8db04cfc-984e-4c96-b920-9e7bdb41b19c)
 
 A simple webchat created using Socket.io.
 
