@@ -1,6 +1,7 @@
 # Webchat
 
 A simple webchat created using Socket.io.
+
 ![webchat](https://github.com/user-attachments/assets/8db04cfc-984e-4c96-b920-9e7bdb41b19c)
 
 # How to Install and Run the Project
