@@ -1,9 +1,7 @@
 # Webchat
 
-![webchat](https://github.com/user-attachments/assets/8db04cfc-984e-4c96-b920-9e7bdb41b19c)
-
 A simple webchat created using Socket.io.
-
+![webchat](https://github.com/user-attachments/assets/8db04cfc-984e-4c96-b920-9e7bdb41b19c)
 
 # How to Install and Run the Project
 **Install dependencies:** Open your terminal in the project directory and type npm install <dependency-name> to install each dependency listed in the package.json file. Repeat the command for all necessary dependencies.
