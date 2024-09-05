@@ -8,11 +8,12 @@ const app = express();
 const server = http.createServer(app);
 const io = socketio(server);
 
+// Serve static files from the "public" directory
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/chat.html', (req, res) => {
     if (req.query.username) {
-        res.sendFile('chat.html', { root: __dirname });
+        res.sendFile(path.join(__dirname, 'chat.html')); // Serve chat.html from the root directory
     } else {
         res.redirect(401, '/');
     }
