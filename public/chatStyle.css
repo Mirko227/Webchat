@@ -10,13 +10,14 @@
 /* Typography 
 ----------------*/
 body{
-    font-family: 'Archivo Black', sans-serif;
+    font-family: "Poppins", sans-serif;
     background-image:url('./img/Minimal\ Clouds\ and\ Sky\ \(1920x1080\).jpg');
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: fixed;
     background-size: cover;
     min-width: 260px;
+    font-weight: 800;
 }
 
 *

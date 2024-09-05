@@ -1,57 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    
-<!--font-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
-<!------->
+  <head>
+    <!--font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!------->
 
-    <link rel="stylesheet" type="text/css" href="/chatStyle.css">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/chatStyle.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WebChat</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.4/qs.min.js" integrity="sha512-BHtomM5XDcUy7tDNcrcX1Eh0RogdWiMdXl3wJcKB3PFekXb3l5aDzymaTher61u6vEZySnoC/SAj2Y/p918Y3w==" crossorigin="anonymous"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.4/qs.min.js"
+      integrity="sha512-BHtomM5XDcUy7tDNcrcX1Eh0RogdWiMdXl3wJcKB3PFekXb3l5aDzymaTher61u6vEZySnoC/SAj2Y/p918Y3w=="
+      crossorigin="anonymous"
+    ></script>
     <script src="/socket.io/socket.io.js"></script>
     <script src="client.js" defer type="module"></script>
-    
-   </head>
-<body>
+  </head>
+  <body>
     <div class="wrapper">
-        <header>
-            <h1>WebChat</h1> 
-            <div class="nav-btn">
-                <a href="/">
-                <button class="exit-btn btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="white" class="bi bi-box-arrow-in-left" viewBox="0 0 16 16" tabindex="1">
-                        <path fill-rule="evenodd" d="M10 3.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-2a.5.5 0 0 1 1 0v2A1.5 1.5 0 0 1 9.5 14h-8A1.5 1.5 0 0 1 0 12.5v-9A1.5 1.5 0 0 1 1.5 2h8A1.5 1.5 0 0 1 11 3.5v2a.5.5 0 0 1-1 0v-2z"/>
-                        <path fill-rule="evenodd" d="M4.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H14.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z"/>
-                      </svg>
-                </button>
-                </a>
-            <button class="person-btn btn"  id="open-card">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="white" class="bi bi-person person" viewBox="0 0 16 16" tabindex="1">
-                <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+      <header>
+        <h1>WebChat</h1>
+        <div class="nav-btn">
+          <a href="/">
+            <button class="exit-btn btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="white"
+                class="bi bi-box-arrow-in-left"
+                viewBox="0 0 16 16"
+                tabindex="1"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10 3.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-2a.5.5 0 0 1 1 0v2A1.5 1.5 0 0 1 9.5 14h-8A1.5 1.5 0 0 1 0 12.5v-9A1.5 1.5 0 0 1 1.5 2h8A1.5 1.5 0 0 1 11 3.5v2a.5.5 0 0 1-1 0v-2z"
+                />
+                <path
+                  fill-rule="evenodd"
+                  d="M4.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H14.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z"
+                />
               </svg>
             </button>
-            </div>
-        </header>
-       
-        <div class="chat-bg">
-            <div class="card" id="card">
-            </div>
-            <div class="userInput">
-                <input type="text" name="keyboard" placeholder="Message" id="keyboard" autocomplete="off" >
-                <button  name="send" value="" id="send">
-                <img src="./img/send.svg">
-                </button>
-            </div>
-            <div class="msgContainer" id="chatBody">
-            </div>
+          </a>
+          <button class="person-btn btn" id="open-card">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="white"
+              class="bi bi-person person"
+              viewBox="0 0 16 16"
+              tabindex="1"
+            >
+              <path
+                d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"
+              />
+            </svg>
+          </button>
         </div>
+      </header>
+
+      <div class="chat-bg">
+        <div class="card" id="card"></div>
+        <div class="userInput">
+          <input
+            type="text"
+            name="keyboard"
+            placeholder="Message"
+            id="keyboard"
+            autocomplete="off"
+          />
+          <button name="send" value="" id="send">
+            <img src="./img/send.svg" />
+          </button>
+        </div>
+        <div class="msgContainer" id="chatBody"></div>
+      </div>
     </div>
-   
-</body>
+  </body>
 </html>
